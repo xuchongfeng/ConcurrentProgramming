@@ -1,7 +1,7 @@
 package Day1;
 
 
-/*class Philosopher implements Runnable{
+class Philosopher implements Runnable{
 	private int left;
 	private int right;
 	public Philosopher(int left, int right){
@@ -13,7 +13,7 @@ package Day1;
 			int tmp = left;
 			left = right;
 			right = tmp;
-		}
+		}*/
 		synchronized(Table.chopstick[left]) {
 			synchronized(Table.chopstick[right]) {
 				System.out.println(left + right + "eating");
@@ -56,4 +56,4 @@ public class Dinner {
 		}
 		for(int i=0;i<5;i++) t[i].join();
 	}
-}*/
+}
